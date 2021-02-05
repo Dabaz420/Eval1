@@ -87,7 +87,7 @@
                 echo("</div>");
                 
                 ////!\
-                //// Lorsque je retoune les valeur de l'API je les passe dans un htmlentities pour éviter les faille XSS
+                //// Lorsque je retoune les valeurs de l'API je les passent dans un htmlentities pour éviter les failles XSS
                 ////!\ 
             }
             //si la requête à échoué
