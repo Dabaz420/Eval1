@@ -1,0 +1,144 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* permet d'utiliser la police télécharger et de lui donner le nom "Stay Home" */
+@font-face{
+    font-family: "Stay Home";
+    src: url('STAY\ HOME.otf');
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+/* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
+@media (min-width: 768px) {
+
+    body{
+        height: 100%;
+        width: 100%;
+        background-color: #222831;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-areas: ". titre ."
+                            ". recherche ."
+                            ". resultat .";
+        justify-items: center;
+        align-items: center;
+    }
+
+    h1{
+        font-family: "Stay home", Helvetica, Arial, sans-serif;
+        color: #ffd369;
+        font-size: 8rem;
+        grid-area: titre;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+        grid-area: resultat;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        font-family: 'Quicksand', sans-serif;
+        background-color: #eeeeee;
+        font-size: 2rem;
+        border: #393e46 solid 0.5rem;
+        
+    }
+
+    form{
+        grid-area: recherche;
+    }
+
+    form input{
+        font-family: 'Quicksand', sans-serif;
+        border: solid #ffd369;
+        border-radius: 1rem;
+    }
+
+    form input:nth-of-type(1){
+        width: 35rem;
+        height: 5rem;
+        font-size: large;
+        text-align: center;
+    }
+
+    form input:nth-of-type(2){
+        width: 15rem;
+        height: 5rem;
+        font-size: large;
+    }
+}
+
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+@media (max-width: 767px) {
+
+    body{
+        height: 100%;
+        width: 100%;
+        background-color: #222831;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-areas: "titre"
+                            "recherche"
+                            "resultat";
+        justify-items: center;
+        align-items: center;
+    }
+
+    h1{
+        font-family: "Stay home", Helvetica, Arial, sans-serif;
+        color: #ffd369;
+        font-size: 7rem;
+        grid-area: titre;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+        grid-area: resultat;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        font-family: 'Quicksand', sans-serif;
+        background-color: #eeeeee;
+        font-size: 2rem;
+        border: #393e46 solid 0.5rem;
+        
+    }
+
+    form{
+        grid-area: recherche;
+    }
+
+    form input{
+        font-family: 'Quicksand', sans-serif;
+        border: solid #ffd369;
+        border-radius: 1rem;
+    }
+
+    form input:nth-of-type(1){
+        width: 23rem;
+        height: 5rem;
+        font-size: large;
+        text-align: center;
+    }
+
+    form input:nth-of-type(2){
+        width: 10rem;
+        height: 5rem;
+        font-size: large;
+    }
+}
